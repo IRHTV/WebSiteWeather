@@ -33,6 +33,7 @@ namespace WebsiteWeather
                 {
                     Url += W_Dt[i]["CityId"].ToString() + ",";
                 }
+                Url = Url.Remove(Url.Length - 1, 1);
                 Url += "&lang=sp&APPID=b85d42ec142e5181939121154dacab88";
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
